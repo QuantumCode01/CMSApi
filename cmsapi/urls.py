@@ -33,8 +33,8 @@ urlpatterns = [
     path('api/login/',views.UserLoginAPIView.as_view(),name='userlogin'),
     path('api/check_logged_in/',views.YourView.as_view(), name='check_logged_in'),
     path('api/post/',views.PostListCreateAPIView.as_view(), name='post'),
-    path('api/post/<str:pk>',views.PostRetrieveUpdateDestroyAPIView.as_view(), name='postmodify'),
+    path('api/post/<str:pk>/',views.PostRetrieveUpdateDestroyAPIView.as_view(), name='postmodify'),
     path('api/likepost/',views.LikePostView.as_view(), name='likepost'),
-    path('api/likepost/<str:pk>',views.LikeRetrieveUpdateDestroyAPIView.as_view(), name='likepostview'),
+    path('api/likepost/<str:pk>/',views.LikeRetrieveUpdateDestroyAPIView.as_view(), name='likepostview'),
     path('api-auth/', include('rest_framework.urls')),
 ]

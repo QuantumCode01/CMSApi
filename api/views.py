@@ -182,6 +182,8 @@ class LikePostView(APIView):
 
 # retrieve, update and delete post   
 class LikeRetrieveUpdateDestroyAPIView(RetrieveUpdateDestroyAPIView):
+    authentication_classes = [JWTAuthentication]
+    permission_classes = [IsAuthenticated]
       # Get the id of likes from the request data
     queryset=like.objects.all()
     serializer_class=LikeSerializer
