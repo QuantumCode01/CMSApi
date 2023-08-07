@@ -15,7 +15,7 @@ from rest_framework.decorators import api_view, authentication_classes, permissi
 from django.utils.decorators import method_decorator
 from django.views.decorators.csrf import csrf_exempt
 from django.db.models import Count
-# from .permissions import IsPostOwnerOrReadOnly
+from .permissions import IsPostOwnerOrReadOnly
 
 
 
@@ -113,7 +113,7 @@ class PostListCreateAPIView(APIView):
     permission_classes = [AllowAny]
     # Get method to view all created posts
     def get(self, request, format=None):
-        # count the number of times the post is liked
+        # count the number of times the post is liked and shows with the post details
         data=Post.objects.annotate(like_count=models.Count('like'))
         serializer=PostSerializer(data,many=True)
         return Response(serializer.data)
@@ -136,7 +136,8 @@ class PostListCreateAPIView(APIView):
 class PostRetrieveUpdateDestroyAPIView(RetrieveUpdateDestroyAPIView):  
     # Get the post_id from the request data
     authentication_classes = [JWTAuthentication]
-    permission_classes = [IsAuthenticated]
+    #Only the user who created the post can put, patch and delete that post.
+    permission_classes = [IsAuthenticated,IsPostOwnerOrReadOnly]
     # count the number of likes and shows individuall details
     queryset=Post.objects.annotate(like_count=Count('like'))
     serializer_class=PostSerializer
