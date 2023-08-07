@@ -18,7 +18,7 @@
 
 
 # API for each task
- |Method     | URL |Description|
+
  | `POST`| http://127.0.0.1:8000/api/user/ | Create User |
  | `GET` | http://127.0.0.1:8000/api/user/ | List Of registered Users with details|
  | `PUT` | http://127.0.0.1:8000/api/user/18/| Update User |
