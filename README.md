@@ -15,9 +15,9 @@
    - Access to the PUT/DELETE APIs for the Post/Blog table should be restricted to the owner of the post/blog.
    - Any user can access the GET API for a post/blog if it is public.
 
-# API for every method
 
-
+   
+# API for each task
         |  Method     |   URL       |  Description     |
     |:---       |   :---:       |   :---:       |
 | `POST`| http://127.0.0.1:8000/api/user/ | Create User |
@@ -36,6 +36,5 @@
 | `GET`|http://127.0.0.1:8000/api/likepost/ | Retrieve The Liked Posts|
 | `GET`|http://127.0.0.1:8000/api/likepost/10/ |Retrieve liked post having id=10|
 | `DELETE`| http://127.0.0.1:8000/api/likepost/10/ | Delete a liked data from like table id=10|
-|
 
 
