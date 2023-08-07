@@ -19,21 +19,21 @@
 
 # API for each task
 
- | `POST`| http://127.0.0.1:8000/api/user/ | Create User |
- | `GET` | http://127.0.0.1:8000/api/user/ | List Of registered Users with details|
- | `PUT` | http://127.0.0.1:8000/api/user/18/| Update User |
- | `PATCH` | http://127.0.0.1:8000/api/user/18/ | Update Partial Details Of User whose id=18|
- | `Delete`|http://127.0.0.1:8000/api/user/18/ | Delete User whose id=18|
- | `POST`|http://127.0.0.1:8000/api/refreshtoken/| Get Access JWT Token with refresh token |
- | `POST`|http://127.0.0.1:8000/api/post/ | Create Post|
- | `GET`| http://127.0.0.1:8000/api/post/| Retrieve Posts|
- | `GET`| http://127.0.0.1:8000/api/post/11/ | Retrieve Post whose id=11|
- | `DELETE`|http://127.0.0.1:8000/api/post/15/| Delete post whose id=15|
- | `PATCH`|http://127.0.0.1:8000/api/post/11/| Update Partial Deatails Of Post whose id=11|
- | `PUT`|http://127.0.0.1:8000/api/post/11/ |Update Complete Deatils Of a Post|
- | `POST`|http://127.0.0.1:8000/api/likepost/|Like a post by passing the post_id|
- | `GET`|http://127.0.0.1:8000/api/likepost/ | Retrieve The Liked Posts|
- | `GET`|http://127.0.0.1:8000/api/likepost/10/ |Retrieve liked post having id=10|
- | `DELETE`| http://127.0.0.1:8000/api/likepost/10/ | Delete a liked data from like table id=10|
+- | `POST`| http://127.0.0.1:8000/api/user/ | Create User |
+- | `GET` | http://127.0.0.1:8000/api/user/ | List Of registered Users with details|
+- | `PUT` | http://127.0.0.1:8000/api/user/18/| Update User |
+- | `PATCH` | http://127.0.0.1:8000/api/user/18/ | Update Partial Details Of User whose id=18|
+- | `Delete`|http://127.0.0.1:8000/api/user/18/ | Delete User whose id=18|
+- | `POST`|http://127.0.0.1:8000/api/refreshtoken/| Get Access JWT Token with refresh token |
+- | `POST`|http://127.0.0.1:8000/api/post/ | Create Post|
+- | `GET`| http://127.0.0.1:8000/api/post/| Retrieve Posts|
+- | `GET`| http://127.0.0.1:8000/api/post/11/ | Retrieve Post whose id=11|
+- | `DELETE`|http://127.0.0.1:8000/api/post/15/| Delete post whose id=15|
+- | `PATCH`|http://127.0.0.1:8000/api/post/11/| Update Partial Deatails Of Post whose id=11|
+- | `PUT`|http://127.0.0.1:8000/api/post/11/ |Update Complete Deatils Of a Post|
+- | `POST`|http://127.0.0.1:8000/api/likepost/|Like a post by passing the post_id|
+- | `GET`|http://127.0.0.1:8000/api/likepost/ | Retrieve The Liked Posts|
+- | `GET`|http://127.0.0.1:8000/api/likepost/10/ |Retrieve liked post having id=10|
+- | `DELETE`| http://127.0.0.1:8000/api/likepost/10/ | Delete a liked data from like table id=10|
 
 
